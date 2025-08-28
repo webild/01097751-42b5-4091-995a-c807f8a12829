@@ -14,9 +14,8 @@ const ContactForm = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission here
   };
 
   return (
@@ -42,7 +41,7 @@ export default function Home() {
         <SimpleKPIBento items={[{ value: '100+', description: 'Happy Customers' }, { value: '95%', description: 'Satisfaction Rate' }, { value: '10', description: 'Years of Experience' }]} className="max-w-7xl" />
       </section>
       <section id="testimonials" className="bg-white py-16">
-        <SimpleStepsBento items={[{ title: 'Great Service', description: 'Best experience ever!', icon: <ArrowRight /> }, { title: 'Reliable', description: 'I can trust them.', icon: <ArrowRight /> }]} className="max-w-7xl" />
+        <SimpleStepsBento items={[{ title: 'Great Service', description: 'Best experience ever!' }, { title: 'Reliable', description: 'I can trust them.' }]} className="max-w-7xl" />
       </section>
       <section id="terms" className="bg-[#FBFBFD] py-16">
         <ContentTextbox title="Terms and Conditions" description={<p>We value transparency. <a href="#" className="text-blue-600">Read full terms here.</a></p>} className="max-w-7xl" />
