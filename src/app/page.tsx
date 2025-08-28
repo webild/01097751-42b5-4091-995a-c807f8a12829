@@ -4,7 +4,6 @@ import SimpleHero from '@/components/sections/layouts/hero/SimpleHero';
 import MinimalAbout from '@/components/sections/layouts/about/MinimalAbout';
 import SimpleKPIBento from '@/components/bento/SimpleKPIBento';
 import SimpleStepsBento from '@/components/bento/SimpleStepsBento';
-import { ArrowRight } from 'lucide-react';
 import ContentTextbox from '@/components/textbox/ContentTextbox';
 import FooterLogoComponent from '@/components/sections/layouts/footer/FooterLogoComponent';
 import { useState } from 'react';
@@ -44,10 +43,10 @@ export default function Home() {
         <SimpleStepsBento items={[{ title: 'Great Service', description: 'Best experience ever!' }, { title: 'Reliable', description: 'I can trust them.' }]} className="max-w-7xl" />
       </section>
       <section id="terms" className="bg-[#FBFBFD] py-16">
-        <ContentTextbox title="Terms and Conditions" description={<p>We value transparency. <a href="#" className="text-blue-600">Read full terms here.</a></p>} className="max-w-7xl" />
+        <ContentTextbox title={<h2>Terms and Conditions</h2>} description={<p>We value transparency. <a href="#" className="text-blue-600">Read full terms here.</a></p>} className="max-w-7xl" > {/* Added children prop with a placeholder */} </ContentTextbox>
       </section>
       <section id="privacy" className="bg-[#FCFCFE] py-16">
-        <ContentTextbox title="Privacy Policy" description={<p>Your data is safe with us. <a href="#" className="text-blue-600">Read full policy here.</a></p>} className="max-w-7xl" />
+        <ContentTextbox title={<h2>Privacy Policy</h2>} description={<p>Your data is safe with us. <a href="#" className="text-blue-600">Read full policy here.</a></p>} className="max-w-7xl" > {/* Added children prop with a placeholder */} </ContentTextbox>
       </section>
       <section id="contact" className="bg-white py-16">
         <h2 className="text-center text-2xl font-bold">Contact Us</h2>

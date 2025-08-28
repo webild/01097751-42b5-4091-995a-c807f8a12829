@@ -25,7 +25,9 @@ export default function RootLayout({
         className={`${interTight.variable} antialiased`}
         style={{ background: 'linear-gradient(180deg, #F7F9FF 0%, #FFFFFF 100%)' }}
       >
-        {children}
+        <SiteThemeProvider theme={{ styleVariant: 'funAndTrendy', colorTemplate: 1, textAnimation: 'slide' }}>
+          {children}
+        </SiteThemeProvider>
       </body>
     </html>
   );
